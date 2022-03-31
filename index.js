@@ -22,7 +22,7 @@ const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
 
 app.get('/', function (req, res) {
-  res.send('Hello World')
+  res.send('By:Bntgp02')
 }) 
 app.listen(3000)
 
