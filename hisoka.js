@@ -537,16 +537,10 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             }
             break
-            case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { imagehttps://telegra.ph/file/9a0208c584b7e2ad617e3.jpg}
-                caption: `*Hai Kak ${m.pushName}*\n\n Daftar Sewa Bot Adalah \n⭔ 5000 Ribu Rupiah Minat wa.me/6281233738677`}, { quoted: m })
-           }
-           break
 	               case 'donasi': case 'sewabot': case 'sewa': case 'buypremium': case 'donate': {
-                hisoka.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/9a0208c584b7e2ad617e3.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Daftar Sewa Bot Adalah \n⭔ 5000 Ribu Rupiah Minat wa.me/6281233738677`}, { quoted: m })
+                hisoka.sendMessage(m.chat, { image: { url: 'ttps://telegra.ph/file/9a0208c584b7e2ad617e3.jpg' }, caption: `*Hai Kak ${m.pushName}*\n\n Daftar Sewa Bot Adalah \n⭔ 5000 Ribu Rupiah Minat wa.me/6281233738677` }, { quoted: m })
            }
            break
-	  
            case 'sc': {
                m.reply('Script : https://github.com/bintangp02')
            }
