@@ -18,7 +18,7 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6281233738677','6289647417373','6288292024190'] //ngak usah ubah errorr
+global.owner = ['6281233738677','6289647417373'] //ngak usah ubah errorr
 global.premium = ['6281233738677'] // nomerrr wa luu
 global.packname = 'Fikrii Gemoyy' //nama luuuu
 global.author = 'WhatsApp Bot'
