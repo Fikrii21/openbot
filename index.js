@@ -15,8 +15,16 @@ const chalk = require('chalk')
 const FileType = require('file-type')
 const path = require('path')
 const PhoneNumber = require('awesome-phonenumber')
+const express = require('express')
+const axios = require('axios')
+const app = express()
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+}) 
+app.listen(3000)
 
 var low
 try {
@@ -55,16 +63,16 @@ if (global.db) setInterval(async () => {
   }, 30 * 1000)
 
 async function startHisoka() {
-    let version = await fetchJson('https://dikaardnt.vercel.app/other/wawebversion')
-    const hisoka = hisokaConnect({
-        logger: pino({ level: 'silent' }),
-        printQRInTerminal: true,
-        browser: ['Hisoka Multi Device','Safari','1.0.0'],
-        auth: state,
-        version
-    })
+let { version, isLatest } = await fetchLatestBaileysVersion()
+const hisoka = hisokaConnect({
+logger: pino({ level: 'silent' }),
+printQRInTerminal: true,
+browser: ['Hisoka Multi Device','Safari','1.0.0'],
+auth: state,
+version
+})
 
-    store.bind(hisoka.ev)
+   store.bind(hisoka.ev)
 
     hisoka.ws.on('CB:call', async (json) => {
     const callerId = json.content[0].attrs['call-creator']
