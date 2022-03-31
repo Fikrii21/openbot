@@ -18,12 +18,12 @@ global.APIKeys = {
 }
 
 // Other
-global.owner = ['6281233738677','6281382420312','6288292024190']
+global.owner = ['6281233738677','6289647417373','6288292024190']
 global.premium = ['6281233738677']
 global.packname = 'Fikrii Gemoyy'
 global.author = 'WhatsApp Bot'
 global.sessionName = 'hisoka'
-global.prefa = ['','!','.','🐦','🐤','🗿']
+global.prefa = ['','!','.','🐦','🐤','🗿','-','*']
 global.sp = '⭔'
 global.mess = {
     success: '✓ Success',
@@ -40,7 +40,7 @@ global.limitawal = {
     premium: "Infinity",
     free: 100
 }
-global.thumb = fs.readFileSync('./lib/hisoka.jpg')
+global.thumb = fs.readFileSync('./lib/Fikrii.jpg')
 
 let file = require.resolve(__filename)
 fs.watchFile(file, () => {
